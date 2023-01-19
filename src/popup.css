@@ -1,0 +1,33 @@
+body {
+  min-width: 260px;
+  max-width: 500px;
+}
+
+.go-to-option {
+  display: none;
+}
+
+
+.files:empty {
+  display: none;
+}
+
+
+.files {
+  padding-inline-start: 20px;
+}
+
+.files li  {
+  cursor: pointer;
+  border-bottom: 1px solid #dedede;
+  padding: 6px 0;
+  word-break: break-all;
+}
+
+.files li:last-child {
+  border-bottom: none;
+}
+
+.files li:hover {
+  background: #efefef;
+}

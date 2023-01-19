@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Options Config</title>
+
+  <style>
+    .github-info {
+      margin: 100px auto;
+      width: 400px;
+      padding: 30px;
+      border-radius: 8px;
+      border: 1px solid #dedede;
+    }
+
+    .item {
+      display: flex;
+      margin: 20px 10px;
+      flex-direction: column;
+    }
+
+    .item input {
+      width: 100%;
+      padding: 10px;
+    }
+
+    .item button {
+      width: 100px;
+      height: 40px;
+      margin: auto;
+    }
+  </style>
+</head>
+
+<body>
+  <form class="github-info">
+    <div class="item">
+      <label for="token">GitHub Access Token(<a href="https://github.com/settings/tokens">Apply Toekn</a>)</label>
+      <input required type="text" name="token" class="github-token" placeholder="access token(format is: 'ghp_xxxx')">
+    </div>
+
+    <div class="item">
+      <label for="owner">GitHub Repo Owner</label>
+      <input required type="text" name="owner" placeholder="github repo's owner">
+    </div>
+    <div class="item">
+      <label for="repo">GitHub Repo Name</label>
+      <input required type="text" name="repo" placeholder="github repo's name">
+    </div>
+    <div class="item">
+      <button type="submit">Save</button>
+    </div>
+    <div class="log"></div>
+  </form>
+  <script src="options.js"></script>
+</body>
+
+</html>

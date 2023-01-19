@@ -1,0 +1,44 @@
+{
+  "manifest_version": 3,
+  "name": "excalidraw file manager",
+  "description": "save excalidraw file to github",
+  "version": "0.1",
+  "permissions": [
+    "activeTab",
+    "tabs",
+    "scripting",
+    "storage"
+  ],
+  "host_permissions": [
+    "https://excalidraw.com/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://excalidraw.com/*"
+      ],
+      "js": [
+        "src/proxy.js"
+      ]
+    }
+  ],
+  "background": {
+    "service_worker": "src/background.js"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "src/hook.js"
+      ],
+      "matches": [
+        "<all_urls>"
+      ],
+      "extension_ids": []
+    }
+  ],
+  "action": {
+    "default_popup": "src/popup.html",
+    "default_title": "Click to view github's files"
+  },
+  "options_page": "src/options.html"
+}
